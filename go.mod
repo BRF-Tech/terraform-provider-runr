@@ -1,13 +1,13 @@
-module github.com/runrsh/terraform-provider-runr
+module github.com/brf-tech/terraform-provider-runr
 
-go 1.26.0
+go 1.26.9
 
 require (
+	github.com/brf-tech/runr/cli v0.5.3
 	github.com/hashicorp/terraform-plugin-framework v1.19.0
 	github.com/hashicorp/terraform-plugin-framework-validators v0.19.0
 	github.com/hashicorp/terraform-plugin-go v0.31.0
 	github.com/hashicorp/terraform-plugin-testing v1.16.0
-	github.com/runrsh/core/cli v0.5.0
 	gopkg.in/yaml.v3 v3.0.1
 )
 

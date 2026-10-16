@@ -54,7 +54,7 @@ signs:
 release:
   disable: '{{ ne (envOrDefault "RUNR_PUBLISH" "false") "true" }}'
   github:
-    owner: runrsh
+    owner: brf-tech
     name: terraform-provider-runr
   extra_files:
     - glob: terraform-registry-manifest.json
