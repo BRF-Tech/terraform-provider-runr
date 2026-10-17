@@ -1,15 +1,19 @@
 # terraform-provider-runr
 
-The Terraform (and OpenTofu) provider for [RunR](https://github.com/brf-tech/runr), the
-open-source serverless platform on Kubernetes and Knative. It manages projects, environment
-variables, custom domains, deployments, bindings, runtime plugins, workflow triggers, model
-services, hosted MCP servers, access control and branding.
+The Terraform (and OpenTofu) provider for [RunR](https://runr.sh), the open-source serverless
+platform on Kubernetes and Knative. It manages projects, environment variables, custom domains,
+deployments, bindings, runtime plugins, workflow triggers, model services, hosted MCP servers,
+access control and branding.
+
+runr.sh serves the provider registry protocol, so `terraform init` installs the provider from
+there and checks it against the release's `SHA256SUMS`, signed with the RunR release key (key ID
+`2588846B241BC095`):
 
 ```hcl
 terraform {
   required_providers {
     runr = {
-      source  = "brf-tech/runr"
+      source  = "runr.sh/brf-tech/runr"
       version = "~> 0.5"
     }
   }
@@ -21,13 +25,14 @@ provider "runr" {
 }
 ```
 
-- Guide with examples: [docs/terraform.md](https://github.com/brf-tech/runr/blob/main/docs/terraform.md) in brf-tech/runr
-- Reference for every resource and data source: [docs/](docs/index.md), also on the Terraform Registry
+- Guide with examples: [runr.sh/docs/terraform](https://runr.sh/docs/terraform/)
+- Reference for every resource and data source: [docs/](docs/index.md), also at
+  [runr.sh/docs/terraform/reference](https://runr.sh/docs/terraform/reference/)
+- Downloads and the signing key: [runr.sh/dl](https://runr.sh/dl/)
 
-This repository is the release mirror of `terraform-provider-runr/` in
-[brf-tech/runr](https://github.com/brf-tech/runr), where the provider is developed. Please open
-issues and pull requests there. Each release here carries the signed archives that the
-Terraform Registry installs.
+This repository is the release mirror of `terraform-provider-runr/` in RunR's repository, where
+the provider is developed. Each release here carries the same signed archives that runr.sh
+serves.
 
 ## Build
 
