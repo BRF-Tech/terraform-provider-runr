@@ -3,7 +3,7 @@ module github.com/brf-tech/terraform-provider-runr
 go 1.26.9
 
 require (
-	github.com/brf-tech/runr/cli v0.5.9
+	github.com/brf-tech/runr/cli v0.5.10
 	github.com/hashicorp/terraform-plugin-framework v1.19.0
 	github.com/hashicorp/terraform-plugin-framework-validators v0.19.0
 	github.com/hashicorp/terraform-plugin-go v0.31.0
