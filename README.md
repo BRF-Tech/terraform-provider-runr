@@ -1,9 +1,11 @@
 # terraform-provider-runr
 
 The Terraform (and OpenTofu) provider for [RunR](https://runr.sh), the open-source serverless
-platform on Kubernetes and Knative. It manages projects, environment variables, custom domains,
-deployments, bindings, runtime plugins, workflow triggers, model services, hosted MCP servers,
-access control and branding.
+platform on Kubernetes and Knative. It manages projects with their triggers, network, deploy
+strategy and global placement, environments, environment variables and secret store references,
+custom domains, deployments, bindings, private connections, topics, runtime plugins, durable
+workflows, model services, hosted MCP servers, the API product of the gateways, secret stores, cost
+limits, access control and branding.
 
 runr.sh serves the provider registry protocol, so `terraform init` installs the provider from
 there and checks it against the release's `SHA256SUMS`, signed with the RunR release key (key ID
@@ -14,7 +16,7 @@ terraform {
   required_providers {
     runr = {
       source  = "runr.sh/brf-tech/runr"
-      version = "~> 0.5"
+      version = "~> 0.6"
     }
   }
 }
