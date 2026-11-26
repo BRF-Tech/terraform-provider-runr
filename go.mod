@@ -3,7 +3,7 @@ module github.com/brf-tech/terraform-provider-runr
 go 1.27.4
 
 require (
-	github.com/brf-tech/runr/cli v0.7.5
+	github.com/brf-tech/runr/cli v0.7.7
 	github.com/hashicorp/go-hclog v1.6.3
 	github.com/hashicorp/go-plugin v1.8.0
 	github.com/hashicorp/hc-install v0.10.0
